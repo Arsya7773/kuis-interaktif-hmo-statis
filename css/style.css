@@ -1,0 +1,227 @@
+body.dark {
+  font-family: 'Inter', sans-serif;
+  background: #121212;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #1f1f1f;
+  border-bottom: 1px solid #333;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #4dabf7;
+  margin-bottom: 0.5rem;
+}
+
+/* ANIMASI TYPEWRITER UNTUK "Kuis Oseanografi" */
+.typing {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  margin: 2rem auto;
+}
+
+.typing h1 {
+  position: absolute;
+  width: 100%;
+  font-size: 45px;
+  text-align: center;
+  color: #4dabf7;
+}
+
+.typing h1:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  animation: kuisType 6s steps(20) 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes kuisType {
+  0% { content: "K"; }
+  6% { content: "Ku"; }
+  12% { content: "Kui"; }
+  18% { content: "Kuis"; }
+  24% { content: "Kuis "; }
+  30% { content: "Kuis O"; }
+  36% { content: "Kuis Os"; }
+  42% { content: "Kuis Ose"; }
+  48% { content: "Kuis Osea"; }
+  54% { content: "Kuis Osean"; }
+  60% { content: "Kuis Oseano"; }
+  66% { content: "Kuis Oseanog"; }
+  72% { content: "Kuis Oseanogr"; }
+  78% { content: "Kuis Oseanogra"; }
+  84% { content: "Kuis Oseanograf"; }
+  90% { content: "Kuis Oseanografi"; }
+  100% { content: "Kuis Oseanografi"; }
+}
+
+/* Slider container */
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 3rem auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.slide-overlay {
+  background: rgba(0,0,0,0.55);
+  color: white;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-overlay h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.start-btn {
+  background: #1e88e5;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.start-btn:hover {
+  background: #1565c0;
+}
+
+/* Slider nav buttons */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+.slider-btn:hover { background: rgba(0,0,0,0.8); }
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.topic-card {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.topic-card:hover {
+  background: #2a2a2a;
+  transform: translateY(-3px);
+}
+
+#quiz-screen, #result-screen {
+  padding: 2rem;
+}
+
+#question-card {
+  background: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  border: 1px solid #333;
+}
+
+#options-container button {
+  display: block;
+  width: 100%;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  color: #f0f0f0;
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#options-container button:hover {
+  background: #3a3a3a;
+}
+
+.quiz-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+button {
+  background: #4dabf7;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #339af0;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #1f1f1f;
+  border-top: 1px solid #333;
+  margin-top: 2rem;
+}
